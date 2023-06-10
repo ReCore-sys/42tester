@@ -1,0 +1,26 @@
+{
+"c00": [
+	{
+		"main": "ft_putchar",
+		"type": "function",
+		"output": "print",
+		"input": "char",
+		"tests": {
+			"a": "a",
+			"\n": "\n",
+			"D": "D"
+		}
+	},
+	{
+		"main": "ft_print_alphabet",
+		"type": "function",
+		"output": "print",
+		"input": "void",
+		"tests": [
+			"abcdefghijklmnopqrstuvwxyz"
+		]
+	}
+],
+"c01": [],
+"c02": []
+}
