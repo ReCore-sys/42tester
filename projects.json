@@ -1,25 +1,11 @@
 {
 "c00": [
-	{
-		"main": "ft_putchar",
-		"type": "function",
-		"output": "print",
-		"input": "char",
-		"tests": {
-			"a": "a",
-			"\n": "\n",
-			"D": "D"
-		}
-	},
-	{
-		"main": "ft_print_alphabet",
-		"type": "function",
-		"output": "print",
-		"input": "void",
-		"tests": [
-			"abcdefghijklmnopqrstuvwxyz"
-		]
-	}
+	"ft_putchar",
+	"ft_print_alphabet",
+	"ft_print_reverse_alphabet",
+	"ft_print_numbers",
+	"ft_is_negative",
+	"ft_print_comb"
 ],
 "c01": [],
 "c02": []

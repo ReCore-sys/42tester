@@ -4,6 +4,7 @@ import re
 import sys
 from glob import glob
 from pathlib import Path
+from tester import test
 
 from rich import print as cprint
 
@@ -63,7 +64,7 @@ if len(sys.argv) < 3:
     else:
         cprint("[yellow]Multiple possible paths found[/yellow]")
         for x in range(len(pathoptions)):
-            cprint(f"[green]{x}: {pathoptions[x]}[/green]")
+            cprint(f"[blue]{x}: {pathoptions[x]}[/blue]")
         cprint(f"[yellow]Please select an option by entering a number from 0 to {len(pathoptions) - 1}[/yellow]")
         inp = input("> ")
         try:
@@ -96,3 +97,6 @@ for exercise in configs:
         todel.append(exercise)
 for x in todel:
     del configs[x]
+
+for ex, config in configs.items():
+    test(projpath + ex, config)
