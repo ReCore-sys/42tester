@@ -5,8 +5,11 @@
 	"ft_print_reverse_alphabet",
 	"ft_print_numbers",
 	"ft_is_negative",
-	"ft_print_comb"
+	"ft_print_comb",
+	"ft_print_comb2",
+	"ft_putnbr",
+	"ft_print_combn"
 ],
-"c01": [],
+"c01": ["ft_ft"],
 "c02": []
 }

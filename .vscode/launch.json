@@ -8,9 +8,9 @@
 			"name": "Python: Current File (Integrated Terminal)",
 			"type": "python",
 			"request": "launch",
-			"program": "${file}",
+			"program": "${workspaceFolder}/main.py",
 			"console": "integratedTerminal",
-			"args": ["c00"]
+			"args": ["c01"]
 		},
 		{
 			"name": "Python: Remote Attach",

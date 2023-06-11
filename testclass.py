@@ -17,6 +17,8 @@ def output(passed: bool, inp: str, expected: str, actual: str):
 class TestOutput():
 	exercise = "None"
 	project = "None"
+	total = 0
+	notfailed = 0
 	def __init__(self, exercise, project):
 		self.excerise = exercise
 		self.project = project
@@ -24,5 +26,17 @@ class TestOutput():
 
 	def runtest(self, target, actual, inp = None, hideout = False):
 		passed = target == actual
-		output(passed, "" if inp == None else inp, target if not hideout else "<Output Hidden>", actual)
+		self.total += 1
+		if passed:
+			self.notfailed += 1
+		output(passed, "" if inp == None else inp, target if not hideout else "<Output Hidden>", actual if not hideout else "<Output Hidden>")
+	
+	def __enter__(self):
+		return self
+	
+	def __exit__(self, *args):
+		if self.total == self.notfailed:
+			cprint(f"\n[green]{self.total}/{self.total} tests passed for {self.project}-{self.excerise.upper()}[/green]")
+		else:
+			cprint(f"\n[red]{self.notfailed}/{self.total} tests passed for {self.project}-{self.excerise.upper()}[/red]")
 
